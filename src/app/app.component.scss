@@ -1,0 +1,77 @@
+.gramophone, .songs-list{
+	width: 60vw;
+	position: absolute;
+	left: 20%;
+}
+
+.gramophone{
+	height: 25vw;
+	top: 5vw;
+	border-radius: 50px;
+	.mat-card-content{
+		display: flex;
+
+		.player{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+			.album-info{
+				height: 100%;
+				color: black;
+				font-size: 2em;
+			}
+			.controllers{
+				height: 80%;
+				display: flex;
+    			justify-content: space-evenly;
+				.mat-icon-button{
+					height: 70px;
+					width: 70px;
+					.mat-icon{
+						font-size: 4em;
+						position: absolute;
+						top: 32%;
+						left: 10%;
+					}
+				}
+			}
+			.album-info, .controllers{
+				margin: 1% 10%;
+			}
+		}
+
+		.disc{
+			width: fit-content;
+			margin: 2.5vw 0;
+
+			.album-controllers {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			.vinyl{ width: 20vw; }
+			.album-img{
+				width: 9vw;
+				height: 9vw;
+				position: absolute;
+				left: 6.5vw;
+				top: 9vw; 
+				border-radius: 100%;
+			}
+		}
+	}
+}
+
+.songs-list{
+	top:35vw;
+	background-color: white;
+	color: black;
+}
+
+.rotate { animation: rotating-disc 3s infinite linear; }
+
+@keyframes rotating-disc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
